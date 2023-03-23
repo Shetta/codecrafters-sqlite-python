@@ -21,8 +21,8 @@ if command == ".dbinfo":
 
         #Stage 2
         database_file.seek(103)
-        row_num = int.from_bytes(database_file.read(2), byteorder='big')
-        print(f' number of rows: {row_num}"')
+        number_of_tables = int.from_bytes(database_file.read(2), byteorder='big')
+        print(f"number of tables: {number_of_tables}")
 
 else:
     print(f"Invalid command: {command}")
